@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #dcecf5;
+  height: 300vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.skyleadExploreContainer {
+  max-width: 1200px;
+  margin: 120px auto;
+  font-family: "Manrope", serif !important;
+}
+.skyleadExploreContainerinner {
+  background-color: #0080ff;
+  height: 420px;
+  padding: 60px;
+  border-radius: 40px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.explore-cards {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: topToBottom 1s ease-in-out;
+
+}
+
+.explore-cards-bottom {
+  position: absolute;
+  bottom: -230px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: BottomTopTop 1s ease-in-out;
+}
+
+
+.explore-inner-card {
+  background-color: white;
+  width: 40%;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 4.8px 14px rgba(46, 52, 54, 0.14),
+    0 4.8px 84.0001px rgba(46, 52, 54, 0.14);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.explore-inner-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.explore-inner-card-bottom {
+  margin-top: 20px;
+}
+.explore-inner-card-bottom a {
+  text-decoration: none;
+  background-color: #3b475d;
+  color: white;
+  width: auto;
+  border: 1px solid transparent;
+  padding: 10px 20px;
+  border-radius: 140px;
+  transition: all 0.3s ease-in-out;
+}
+.explore-inner-card-bottom a:hover {
+  text-decoration: none;
+  background-color: transparent;
+  color: #3b475d;
+  border: 1px solid #3b475d;
+  width: auto;
+  padding: 10px 20px;
+  border-radius: 140px;
+  transition: all 0.3s ease-in-out;
+}
+.skyleadExploreContainerinner h1 {
+  font-size: 52px;
+  width: 60%;
+  text-align: center;
+  color: white;
+}
+.explore-cards h1,
+.explore-cards-bottom h1{
+    color: black;
+    text-align: left;
+}
+.skyleadExploreContainerinner h1 .highligter{
+    background-color: #fca739;
+    border-radius: 140px;
+}
+
+.skyleadExploreContainer {
+  perspective: 1000px;
+}
+
+.explore-inner-card {
+  transform: rotateY(0deg) translateZ(0);
+  transition: transform 0.5s ease-out;
+  will-change: transform;
+}
+
+.explore-inner-card.visible {
+  transform: translateY(-100px) ;
+}
