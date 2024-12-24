@@ -1,3 +1,5 @@
+/**********scrolling service**************/
+
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 
 * {
@@ -5,18 +7,13 @@
   padding: 0;
   box-sizing: border-box;
 }
-body {
-  background-color: #dcecf5;
-  height: 300vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 .skyleadExploreContainer {
   max-width: 1200px;
   margin: 120px auto;
   font-family: "Manrope", serif !important;
 }
+
 .skyleadExploreContainerinner {
   background-color: #0080ff;
   height: 420px;
@@ -39,7 +36,6 @@ body {
   left: 50%;
   transform: translateX(-50%);
   animation: topToBottom 1s ease-in-out;
-
 }
 
 .explore-cards-bottom {
@@ -53,7 +49,6 @@ body {
   align-items: center;
   animation: BottomTopTop 1s ease-in-out;
 }
-
 
 .explore-inner-card {
   background-color: white;
@@ -73,9 +68,11 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+
 .explore-inner-card-bottom {
   margin-top: 20px;
 }
+
 .explore-inner-card-bottom a {
   text-decoration: none;
   background-color: #3b475d;
@@ -86,6 +83,7 @@ body {
   border-radius: 140px;
   transition: all 0.3s ease-in-out;
 }
+
 .explore-inner-card-bottom a:hover {
   text-decoration: none;
   background-color: transparent;
@@ -96,20 +94,23 @@ body {
   border-radius: 140px;
   transition: all 0.3s ease-in-out;
 }
+
 .skyleadExploreContainerinner h1 {
   font-size: 52px;
   width: 60%;
   text-align: center;
   color: white;
 }
+
 .explore-cards h1,
-.explore-cards-bottom h1{
-    color: black;
-    text-align: left;
+.explore-cards-bottom h1 {
+  color: black;
+  text-align: left;
 }
-.skyleadExploreContainerinner h1 .highligter{
-    background-color: #fca739;
-    border-radius: 140px;
+
+.skyleadExploreContainerinner h1 .highligter {
+  background-color: #fca739;
+  border-radius: 140px;
 }
 
 .skyleadExploreContainer {
@@ -123,5 +124,138 @@ body {
 }
 
 .explore-inner-card.visible {
-  transform: translateY(-100px) ;
+  transform: translateY(-100px);
+}
+.explore-inner-card-top h1 {
+  font-size: 32px !important;
+}
+/**********scrolling service**************/
+@media screen and (min-width: 763px) and (max-width: 1080px) {
+  .explore-inner-card-top h1 {
+    font-size: 26px !important;
+  }
+  .explore-inner-card-top svg {
+    width: 50px;
+  }
+  .explore-inner-card-description p {
+    font-size: 16px !important;
+  }
+  .skyleadExploretitle {
+    font-size: 42px !important;
+  }
+  .skyleadExploreContainerinner .skyleadExploretitle {
+    width: 70%;
+  }
+  .explore-inner-card {
+    width: 45%;
+  }
+}
+@media screen and (min-width: 569px) and (max-width: 762px) {
+  .explore-cards-bottom,
+  .explore-cards {
+    width: 98%;
+  }
+
+  .explore-inner-card {
+    width: 48%;
+  }
+  .explore-inner-card-top svg {
+    width: 50px;
+  }
+  .explore-inner-card-description p {
+    font-size: 16px !important;
+  }
+  .skyleadExploreContainerinner .skyleadExploretitle {
+    width: 62%;
+    font-size: 26px;
+  }
+}
+@media screen and (min-width: 468px) and (max-width: 568px) {
+  .explore-cards-bottom,
+  .explore-cards {
+    width: 98%;
+  }
+  .explore-inner-card-top h1 {
+    font-size: 22px !important;
+  }
+  .explore-inner-card {
+    width: 48%;
+  }
+  .explore-inner-card-top svg {
+    width: 50px;
+  }
+  .explore-inner-card-description p {
+    font-size: 15px !important;
+  }
+  .skyleadExploreContainerinner .skyleadExploretitle {
+    width: 80%;
+    font-size: 26px;
+  }
+  .explore-inner-card.visible {
+    transform: translateY(-110px);
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 467px) {
+  body {
+    height: 500vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .explore-cards,
+  .explore-cards-bottom {
+    flex-direction: column;
+    width: 90%;
+    gap: 30px;
+  }
+  .explore-cards-bottom {
+    bottom: 0;
+  }
+  .explore-inner-card {
+    width: 100%;
+  }
+  .explore-inner-card {
+    justify-content: start;
+    transform: translateY(0);
+  }
+  .explore-inner-card-1 {
+    transform: translateY(-350px) !important;
+  }
+  .explore-inner-card-2 {
+    transform: translateY(-350px) !important;
+  }
+  .explore-inner-card-3 {
+    transform: translateY(350px) !important;
+  }
+  .explore-inner-card-4 {
+    transform: translateY(350px) !important;
+  }
+  .skyleadExploreContainer {
+    margin: 0 10px;
+  }
+  .skyleadExploreContainerinner {
+    padding: 0;
+  }
+  .skyleadExploreContainerinner .skyleadExploretitle {
+    font-size: 6vw !important;
+    width: 100%;
+  }
+  .explore-inner-card {
+    transform: rotateY(20deg) translateZ(0);
+    transition: transform 0.5s ease-out;
+    will-change: transform;
+  }
+  .explore-inner-card-top h1 {
+    font-size: 22px !important;
+  }
+  .explore-inner-card-top svg {
+    width: 50px;
+  }
+  .explore-inner-card-description p {
+    font-size: 15px !important;
+  }
+  .explore-inner-card-top{
+    justify-content: space-between;
+  }
 }
