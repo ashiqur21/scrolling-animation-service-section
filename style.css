@@ -197,6 +197,7 @@
 }
 
 @media screen and (min-width: 0px) and (max-width: 467px) {
+  
   .explore-cards,
   .explore-cards-bottom {
     flex-direction: column;
@@ -249,7 +250,7 @@
   .explore-inner-card-description p {
     font-size: 15px !important;
   }
-  .explore-inner-card-top {
+  .explore-inner-card-top{
     justify-content: space-between;
   }
 }
